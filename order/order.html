@@ -12,24 +12,118 @@
 </head>
 <body>
     <header>
-        <div class="left-header">
-            <a href="../index.html" id="logoid">
-                ShopLane
-            </a>
+        <div class="header">
+            <div class="left-header">
+                <a href="../index.html" id="logoid">
+                    ShopLane
+                </a>
+            </div>
+            <div class="mid-header">
+                <a href="../index.html#clothe-section">Clothings</a>
+                <a href="../index.html#access-section">Accessories</a>
+            </div>
+            <div class="rt-header">
+                <div class="g-search" id="g-Search-container1">
+                    <div class="gcse-search" id="g-Search"></div>
+                </div>
+                <div class="display-search" id="search-container">
+                    <i class="fa-solid fa-magnifying-glass display-search" id="search-icon"></i>
+                </div>
+                <a id="shopping" href="order.html">
+                    <div id="counter">0</div>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+                <div id="profile-container">
+                    <div id="profile">
+                        <i class="fa-solid fa-user" ></i>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="mid-header">
-            <a href="../index.html#clothe-section">Clothings</a>
-            <a href="../index.html#access-section">Accessories</a>
+        <div id="big-search-bar" class="big-search-bar">
+            <div class="gcse-search"></div>
         </div>
-        <div class="rt-header">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <a id="shopping" href="order.html">
-                <div id="counter">0</div>
-                <i class="fa-solid fa-cart-shopping"></i>
-            </a>
-            <i class="fa-solid fa-user"></i>
-        </div>
+        <aside id="profile-dropdown" class="profile-dropdown">
+            <ul>
+                <li> 
+                    <a href="">Profile</a>
+                </li>
+                <li>
+                    <a href="">Settings</a>
+                </li>
+                <li>
+                    <a href="" id="login">LogIn</a>
+                </li>
+                <li>
+                    <a href="" id="logout" class="display-none">LogOut <i class="fa-solid fa-right-from-bracket"></i></a>
+                </li>
+            </ul>
+        </aside>
     </header>
+    <aside id="login-form" class="login-form display-none">
+        <form class="form" autocomplete="off">
+            <h3>Sign In</h3>
+            <input type="text" placeholder="UserId or Email" name="username" id="username" required />
+            <div class="password-container">
+                <input type="password" placeholder="Password" name="password" id="password" required />
+                <div class="display-none" id="validated">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <div class="display-none" id="non-validated">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <input type="submit" id="login-submit" value="LogIn" />
+            <span class="lf-or">
+                <div></div>
+                or
+                <div></div>
+            </span>
+            <div class="login-social">
+                <div id="google-login-container">
+                    <i class="fa-brands fa-google" id="google-login"></i>
+                    <div id="google-txt">
+                        - Sign-in with Google
+                    </div>
+                </div>
+                <div id="fb-login-container">
+                    <i class="fa-brands fa-facebook" id="fb-login"></i>
+                    <div id="fb-txt">
+                        - Sign-in with Facebook
+                    </div>
+                </div>
+            </div>
+        </form>
+    </aside>
+    <aside id="logout-form" class="display-none">
+        <div class="logout-q">
+            You want to LogOut?
+        </div>
+        <div class="yes-no-container">
+            <a href="">
+                <button id="logout-yes">Yes</button> 
+            </a> 
+            <a href="">
+                <button id="logout-no">No</button>
+            </a>
+        </div>
+    </aside>
+    <aside id="order-login-page" class="display-none">
+        <div class="ol-icon">
+            <i class="fa-solid fa-circle-exclamation"></i>
+        </div>
+        <div class="ol-txt">
+            Please, <a href="#login" id="order-login-req">login</a> first!
+        </div>
+    </aside>
+    <aside id="cart-item-zero" class="display-none">
+        <div class="ci-icon">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+        </div>
+        <div class="ci-txt">
+            Please, add <a href="../index.html">items</a> to cart!
+        </div>
+    </aside>
     
     <main id="order">
         <h2>
@@ -129,6 +223,8 @@
         </div>
     </footer>
 
+    <script async src="https://cse.google.com/cse.js?cx=402d0b98ea75f443e">
+    </script>
     <script
     src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="

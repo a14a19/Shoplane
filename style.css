@@ -18,12 +18,11 @@ a:hover {
 li{
     list-style: none !important;
 }
+body {
+    position: relative;
+}
 header {
-    width: 100%;
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
     text-transform: uppercase;
     box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
     position: fixed;
@@ -32,6 +31,14 @@ header {
     right: 0%;
     background: whitesmoke;
     z-index: 100;
+}
+.header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
 }
 .left-header {
     font-size: 24px;
@@ -69,6 +76,175 @@ header {
     justify-content: center;
     align-items: center;
     font-size: 14px;
+}
+#login {
+    font-weight: 600;
+}
+#logout {
+    color: red;
+    font-weight: 600;
+}
+#profile-container {
+    cursor: pointer;
+}
+.profile-dropdown {
+    display: none;
+}
+#profile-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    background: whitesmoke;
+    padding: 15px 30px;
+    box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.2);
+}
+#profile-dropdown li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.login-form {
+    background: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: fixed;
+    top: 15%;
+    right: 0%;
+    left: 0%;
+    width: 100%;
+    height: 75vh;
+    min-height: 350px;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+.login-form h3 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.login-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+}
+.login-form-none {
+    display: none;
+}
+.valid {
+    color: green;
+}
+.not-valid {
+    color: red;
+}
+#logout-form {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: whitesmoke;
+    margin-left: auto;
+    margin-right: auto;
+    position: fixed;
+    top: 15%;
+    right: 0%;
+    left: 0%;
+    width: 100%;
+    height: 75vh;
+    min-height: 250px;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+.password-container{
+    position: relative;
+}
+#validated, #non-validated {
+    position: absolute;
+    right: -25px;
+    top: 5px;
+    z-index: 110;
+}
+.login-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+#google-login, #fb-login {
+    font-size: 24px;
+    margin: auto 8px;
+}
+#google-login-container, #fb-login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 10px;
+    cursor: pointer;
+}
+#google-login-container:hover, #fb-login-container:hover {
+    background: #009684f2;
+    color: whitesmoke;
+    box-shadow: inset 0px 0px 2px 1px black;
+}
+#username, #password {
+    margin-bottom: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 3px;
+    width: 100%;
+}
+.lf-or {
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.5);
+}
+.lf-or div {
+    width: 60px;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.2);
+    margin: auto 10px;
+}
+#login-submit {
+    background: #009688;
+    color: whitesmoke;
+    padding: 12px 25px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+#login-submit:hover {
+    background: #009684f2;
+    box-shadow: inset 0px 0px 2px 1px black;
+}
+.logout-q {
+    font-weight: 600;
+    margin: 25px auto;
+}
+#logout-yes, #logout-no{
+    background: #009688;
+    color: whitesmoke;
+    padding: 12px 25px;
+    border-radius: 6px;
+    margin: 0px 8px 30px 8px;
+    border: none;
+    cursor: pointer;
+}
+#logout-yes:hover, #logout-no:hover {
+    background: whitesmoke;
+    color: black;
+    box-shadow: inset 0px 0px 2px 1px black;
 }
 footer {
     display: flex;
@@ -189,6 +365,42 @@ footer div div {
 
 /* for orders------------------------------------------ */
 
+#order-login-page, #cart-item-zero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: whitesmoke;
+    margin-left: auto;
+    margin-right: auto;
+    position: fixed;
+    top: 15%;
+    right: 0%;
+    left: 0%;
+    width: 100%;
+    height: 75vh;
+    min-height: 250px;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+    z-index: 50;
+}
+.ol-icon {
+    color: red;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+.ci-icon {
+    color: rgb(255, 217, 0);
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+.ol-txt, .ci-txt {
+    font-weight: 600;
+    font-size: 18px;
+}
+.ol-txt a, .ci-txt a {
+    padding-bottom: 2px;
+    border-bottom: 1px solid black;
+}
 .main-container{
     display: flex;
     justify-content: space-evenly;
@@ -315,6 +527,9 @@ footer div div {
 }
 
 @media(max-width: 550px){
+    .big-search-bar {
+        display: none;
+    }
     #card-clothe, #card-access{
         display: grid; 
         grid-template-columns: auto auto; 
@@ -333,6 +548,9 @@ footer div div {
     #shopping {
         margin-left: 18px;
         margin-right: 18px;
+    }
+    #profile-dropdown {
+        right: 0px;
     }
 }
 
@@ -398,4 +616,46 @@ footer div div {
 .my-dots button {
     background: transparent;
     border: none;
+}
+
+ /* google search bar */
+ .big-search-bar {
+    display: none;
+}
+.display-search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.g-search {
+    display: none;
+}
+.gsc-control-cse{
+    padding: 0 !important;
+}
+.gsc-search-button {
+    display: none !important;
+}
+form.gsc-search-box, table.gsc-search-box{
+    margin-bottom: 0 !important;
+}
+table.gsc-search-box td.gsc-input {
+    padding-right: 0 !important;
+}
+#search-icon {
+    cursor: pointer;
+}
+#g-Search-container1{
+    width: 150px;
+}
+
+/* display ------------------------ */
+.display-none {
+    display: none !important;
+}
+.display-inline-flex{
+    display: inline-flex;
+}
+.border-none {
+    border: none !important;
 }
